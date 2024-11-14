@@ -21,7 +21,11 @@ export const styles = StyleSheet.create({
     backgroundColor:'rgba(134, 142, 150, 1)'
   },
   cardContent: {
+<<<<<<< HEAD
     display: "flex",
+=======
+
+>>>>>>> 903c2cd4d5e3be399f857e14c1aa988fa3d7f884
     alignItems: "center",
     gap: 20,
     flexDirection: "row",
@@ -44,6 +48,11 @@ export const styles = StyleSheet.create({
     color: "rgba(73, 80, 87, 1)",
     fontSize: 20,
     fontWeight: "500",
+<<<<<<< HEAD
+=======
+    width: 120,
+    alignItems: 'flex-start',
+>>>>>>> 903c2cd4d5e3be399f857e14c1aa988fa3d7f884
   },
   role: {
     color: "rgba(134, 142, 150, 1)",

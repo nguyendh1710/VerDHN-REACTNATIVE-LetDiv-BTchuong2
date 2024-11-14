@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TextInput } from "react-native";
 import { styles } from "./EmployeeAdd.style";
 import PrimaryButton from "./../../components/PrimaryButton/PrimaryButton ";
+<<<<<<< HEAD
 import { useSelector, useDispatch } from "react-redux";
 
 export default function EmployeeAdd({
@@ -37,10 +38,48 @@ export default function EmployeeAdd({
   };
 
   //
+=======
+import { useSelector, useDispatch } from 'react-redux';
+import { addEmployee,filterEmployee} from './../../slices/slice';
+import Input from '../../components/Input/Input';
+export default function EmployeeAdd({modalState,setModalState}) {
+
+  const dispatch = useDispatch();
+
+  const [textEmployeeName, setTextEmployeeName] = useState("");
+  const [textEmployeePosition, setTextEmployeePosition] = useState("");
+
+
+  const handleAddEmployee = () => {
+  //   // tạo một object để chứa đối tượng mới tạo -> nho de key khop voi mang goc state
+    const addedEmployee = {
+      name: textEmployeeName,
+      avatarUri: textEmployeePosition,
+
+    };
+  //   // gọi hàm de dispatch
+  dispatch(addEmployee(addedEmployee)) ;
+  // dispatch(filterEmployee(addedEmployee));
+  //   // chuyển các input lại thành rỗng
+
+    setTextEmployeePosition("");
+    setTextEmployeeName("");
+  //   // truyền callback lên cha để đóng modal
+    setModalState(!modalState);
+  };
+ 
+ 
+ 
+  
+ 
+ 
+
+>>>>>>> 903c2cd4d5e3be399f857e14c1aa988fa3d7f884
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}> Thêm nhân viên </Text>
+<<<<<<< HEAD
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
@@ -62,3 +101,26 @@ export default function EmployeeAdd({
   );
 }
 //////////////////
+=======
+      <Input
+        style={styles.inputContainer}
+        placeholder="Họ và tên"
+        value={textEmployeeName}
+        onChangeText={(e) => setTextEmployeeName(e)}
+      />
+      <Input
+        style={styles.inputContainer}
+        placeholder="Chức vị"
+        value={textEmployeePosition}
+        onChangeText={(e) => setTextEmployeePosition(e)}
+      />
+     <View style={styles.buttonPosition}>
+     <PrimaryButton  onPress={handleAddEmployee}  >
+        Lưu
+      </PrimaryButton>
+     </View>
+     
+    </View>
+  );
+}
+>>>>>>> 903c2cd4d5e3be399f857e14c1aa988fa3d7f884

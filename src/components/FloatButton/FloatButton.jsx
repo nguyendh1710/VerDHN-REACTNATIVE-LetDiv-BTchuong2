@@ -9,6 +9,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 export default function FloatButton({onPress}) {
   return (
     <TouchableOpacity onPress={onPress}>
+<<<<<<< HEAD
     <View style={styles.container}>
       <LinearGradient
         colors={['#F76707', '#FF922B']}
@@ -21,5 +22,18 @@ export default function FloatButton({onPress}) {
     </View>
   </TouchableOpacity>
   
+=======
+      <View style={styles.container}>
+      <LinearGradient
+                colors={['#F76707', '#FF922B']}
+                style={styles.gradient}
+            >
+        <Text>
+          <Icon name="add" size={30} color="#FFFFFF" />
+        </Text>
+        </LinearGradient>
+      </View>
+    </TouchableOpacity>
+>>>>>>> 903c2cd4d5e3be399f857e14c1aa988fa3d7f884
   );
 }
